@@ -1,0 +1,71 @@
+---
+title: Home Page
+description: Personal home page
+header: Suriya Subramanian
+---
+## Suriya Subramanian (resume: [PDF][PDF]<!-- [TXT][TXT]-->)
+### Doctoral Candidate (Advisor: [Prof. Kathryn S. McKinley][mckinley])<br /> [Department of Computer Science][utcs] <br /> [The University of Texas at Austin][ut]
+
+--------------------------------------------------------------
+
+## Contact Information
+Office: [ACES][aces] 3SEo5A  
+Phone : (512) 232 7439  
+E-mail: firstname@alumni.cs.utexas.edu ([public key][gpg])  
+
+--------------------------------------------------------------
+
+## Thesis
+Suriya Subramanian: "Dynamic Software Updates: A VM-Centric Approach," The
+University of Texas at Austin, May 2010. [[PDF]][thesis-pdf]
+
+## Conference Publications
+1. Suriya Subramanian, Michael Hicks, Kathryn S. McKinley: "Dynamic
+Software Updates in Java: A VM-centric approach," In
+Programming Language Design and
+Implementation (PLDI), June 2009. [[PDF]][jvolve-pldi]
+[[slides]][jvolve-pldi-slides] [[Jvolve source code]][jvolve]
+<!-- 2. Suriya Subramanian, Michael Hicks, Kathryn S. McKinley: "Dynamic
+Software Updates in Java: A VM-centric approach," UT-Austin Computer
+Science Technical Report TR-08-38. 2008. [[PDF]][tr] -->
+3. Suriya Subramanian, Kathryn S. McKinley: "HeDGE: Hybrid Dataflow Graph
+Execution in the Issue logic," The 4th International Conference on High
+Performance and Embedded Architectures and Compilers (HiPEAC), 2009. [[PDF]][hedge]
+4. Mohan G Kabadi, Natarajan Kannan, Palanidaran Chidambaram, Suriya
+Subramanian, and Ranjani Parthasarathi: "Dead-Block Elimination in Cache:
+A Mechanism to Reduce I-Cache Power Consumption in High Performance
+Microprocessors," 9th International Conference on High Performance
+Computing (HiPC), pages 79-88, 2002. [[PDF]][dbec]
+
+--------------------------------------------------------------
+
+## HOWTO
+[Connecting to the UT restricted.utexas.edu wireless network in Linux (Ubuntu 7.04)][wireless]
+
+--------------------------------------------------------------
+
+## Misc.
+I reported a [bug in GCC][gcc] that was accepted and fixed.  
+Blog: [Eternally Dissatisfied][wp] ([recent posts][recent]) (username [mssnlayam][wp])
+
+[utcs]: http://www.cs.utexas.edu
+[ut]:   http://www.utexas.edu
+[gpg]:  pubkey.asc.txt
+[wireless]: UT-wireless
+[wp]:   http://mssnlayam.wordpress.com
+[gcc]:  http://gcc.gnu.org/bugzilla/show_bug.cgi?id=19491
+[mckinley]: http://www.cs.utexas.edu/users/mckinley
+[recent]: recent-posts.html
+[aces]: http://www.utexas.edu/maps/main/buildings/ace.html
+[PDF]: files/resume-suriya.pdf
+[TXT]: files/resume-suriya.txt
+[jvolve]: jvolve
+
+<!-- papers -->
+
+[thesis-pdf]: papers/suriya-thesis-final.pdf
+[tr]:   papers/tr-08-38.pdf
+[hedge]: papers/hedge.pdf
+[dbec]:  papers/dbec.pdf
+[jvolve-pldi]: papers/jvolve-pldi.pdf
+[jvolve-pldi-slides]: papers/jvolve-pldi-slides.pdf
