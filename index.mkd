@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: plain
 title: Home Page
 description: Personal home page
 header: Suriya Subramanian
