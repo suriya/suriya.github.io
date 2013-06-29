@@ -1,0 +1,146 @@
+Suriya Subramanian
+The University of Texas at Austin
+Department of Computer Science
+1 University Station C0500, TAY 2.124
+Austin, TX 78712 USA
+Phone: (512) 850-6363
+Email: username: suriya domain: cs.utexas.edu
+http://www.cs.utexas.edu/users/suriya
+
+RESEARCH INTERESTS
+  Compilers, Programming languages, Managed languages, Computer Architecture
+
+EDUCATION
+  PhD in Computer Sciences
+  August '03 - May '10
+  Thesis: Dynamic Software Updates: A VM-centric Approach
+  Advisor: Prof. Kathryn S. McKinley
+  Department of Computer Science
+  The University of Texas at Austin
+
+  Master of Science in Computer Sciences
+  August '03 - May '06
+  Department of Computer Science
+  The University of Texas at Austin
+
+  Bachelor of Engineering in Computer Sciences
+  August '99 - May '03
+  Anna University
+  College of Engineering, Guindy, Chennai, India
+
+CONFERENCE PUBLICATIONS
+  Suriya Subramanian, Michael Hicks, Kathryn S. McKinley: Dynamic Software
+  Updates: A VM-centric Approach," In Programming Language Design and
+  Implementation (PLDI), 2009 (20% acceptance rate).
+
+  Suriya Subramanian, Kathryn S. McKinley: HeDGE: Hybrid Dataflow Graph
+  Execution in the Issue logic," The 4th International Conference on High
+  Performance and Embedded Architectures and Compilers (HiPEAC), 2009 (28%
+  acceptance rate).
+
+  Mohan G Kabadi, Natarajan Kannan, Palanidaran Chidambaram, Suriya
+  Subramanian, and Ranjani Parthasarathi: Dead-Block Elimination in Cache: A
+  Mechanism to Reduce I-Cache Power Consumption in High Performance
+  Microprocessors," 9th International Conference on High Performance Computing
+  (HiPC), pages 79-88, 2002 (39% acceptance rate).
+
+TECHNICAL REPORTS
+  Suriya Subramanian, Michael Hicks, Kathryn S. McKinley: Dynamic Software
+  Updates in Java: A VM-Centric Approach," The University of Texas at Austin,
+  Department of Computer Science, TR-08-38, 2008.
+
+  Suriya Subramanian, Kathryn S. McKinley: HeDGE: Hybrid Dataflow Graph
+  Execution in the Issue logic," The University of Texas at Austin, Department
+  of Computer Science, TR-08-42, 2008.
+
+AWARDS
+  * TA Excellence Award - Honorable Mention, Department of Computer Science,
+    UT (Fall 2007)
+  * Dean's Excellence Award from the College of Natural Sciences, UT (2003)
+  * Microelectronics and Computer Development Fellowship, UT (2003-2004)
+  * NCERT National Talent Search Scheme Scholarship, India (1997-2003)
+  * Dr. MGR Quiad-e-milleth Endowment Scholarship, Anna University (1999-2003)
+
+TALKS
+  Dynamic Software Updates: A VM-centric Approach
+   * ACM SIGPLAN PLDI 2009 Trinity College, Dublin, 2009/6/16
+   * DaCapo Research Meeting, Tufts University, Boston, 2009/5/1
+   * Programming Lunch series, UT Austin, 2009/4/24
+   * Parasol Seminar, Texas A&M University, 2009/4/17
+   * DaCapo Research Meeting, University of Massachusetts Amherst, 2008/1/3
+   * Programming Lunch series, UT Austin, 2007/12/12
+
+  HeDGE: Hybrid Dataflow Graph Execution in the Issue logic
+   * The 4th International Conference on High Performance and Embedded
+     Architectures and Compilers (HiPEAC 2009), Paphos, Cyprus, 2009/1/28
+   * 8th Annual Austin CAS Conference, IBM Austin, 2007/3/2
+
+  Compiler Controlled Speculation for Power Aware ILP
+  Extraction in Dataflow Architectures
+   * Talk on behalf of Muhammad Umar Farooq at the 4th International Conference
+     on High Performance and Embedded Architectures and Compilers (HiPEAC
+     2009), Paphos, Cyprus, 2009/1/28
+
+EXPERIENCE
+  Graduate Research Assistant
+  Jan '07 - May '10
+  Graduate Research Assistant with Dr. Kathryn McKinley.  Worked on supporting
+  Dynamic Software Updates in Java.
+
+  Teaching Assistant
+  Aug '07 - Dec '07
+  Teaching Assistant for "Advanced Compiler Techniques," instructor Dr.  Keshav
+  Pingali, (Fall 2007), Department of Computer Science, The University of Texas
+  at Austin.  Responsibilities included holding office hours, conducting
+  tutorial sessions, designing and grading assignments. The Department of
+  Computer Science awarded me a "TA Excellence Award - Honorable Mention."
+
+  Graduate Intern
+  May '06 - Aug '06
+  Internship in the ICC Compiler group at Intel, Santa Clara.  Mentor: David
+  Sehr. I worked on "Threading support by compiler instrumentation." I added a
+  compiler phase to ICC to statically instrument memory instructions. These
+  instrumented instructions make calls to a runtime system, that helps detect
+  dependences that inhibit parallelism. To demonstrate the utility of this
+  approach, we worked on instrumenting and parallelizing ICC.
+
+  Graduate Research Assistant
+  May '04 - December '06
+  Member of the TRIPS compiler team. Worked on array layout and loop reordering
+  optimizations in the Scale compiler for improving memory accesses to the
+  banked L-1 data cache in the TRIPS processor. I also worked on profiling of
+  memory accesses, and feeding this data back to the TRIPS scheduler, to help
+  place memory operations on the grid in an efficient manner.  During this
+  time, I also implemented the PowerPC/Linux backend for the Scale compiler.
+
+  Teaching Assistant
+  Jan '05 - May '05
+  Teaching Assistant for "Introduction to Operating Systems (Honors),"
+  instructor Dr. Mike Dahlin (Spring 2005), Department of Computer Science, The
+  University of Texas at Austin. Responsibilities included holding office hours
+  and grading programming assignments.
+
+  Teaching Assistant
+  Aug '04 - Dec '04
+  Teaching Assistant for "Graduate Compilers," instructor Dr. Kathryn McKinley,
+  (Fall 2004), Department of Computer Science, The University of Texas at
+  Austin.  Responsibilities included holding office hours, grading homeworks,
+  setting up infrastructure, preparing programming assignments and automated
+  testing of assignments.
+
+  Systems administrator
+  Aug '01 - May '03
+  System administrator for the host cs.annauniv.edu, School of Computer Science
+  and Engineering, Anna University.  Responsibilities included installing
+  operating system, creating user accounts, managing user e-mail, managing user
+  web space, data backup, etc.
+
+OTHER ACTIVITIES
+  Action Center Co-ordinator (2007, 2008), Vibha Austin, a non-profit focussing
+  on underprivileged children.
+
+CITIZENSHIP
+  India, Visa: F-1
+
+REFERENCES
+  Available upon request.

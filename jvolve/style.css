@@ -1,0 +1,23 @@
+body {
+  width: 800px;
+  font-family: 'Lucida Grande', Arial, sans-serif;
+  /* background-color: #f0f0f0; */
+}
+
+h1,h2,h3 {
+  text-align: center;
+}
+
+.caution {
+  background-color: #ffcccc;
+  padding: 10px;
+  border-top:    2px solid red;
+  border-bottom: 2px solid red;
+}
+
+pre {
+  background-color: #ccffcc;
+  padding: 10px;
+  border-top:    2px solid darkgreen;
+  border-bottom: 2px solid darkgreen;
+}

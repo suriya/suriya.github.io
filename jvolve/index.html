@@ -1,0 +1,172 @@
+<html>
+  <head>
+    <title>Jvolve: A Java VM with Dynamic Software Updating support</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+<h1>Jvolve</h1>
+
+<p>Jvolve is a Java VM with Dynamic Software Updating (DSU) support. DSU is a
+general-purpose mechanism that updates from an old version to a newer
+version of a program while it is running. DSU does not impose any special
+software or hardware architecture. For more details refer to our PLDI 2009
+paper, "Dynamic Software Updates: A VM-centric Approach" <a href="http://www.cs.utexas.edu/users/suriya/papers/jvolve-pldi.pdf">PDF</a>
+<a href="http://www.cs.utexas.edu/users/suriya/papers/jvolve-pldi.bib">bibtex</a>.</p>
+
+<div class="caution">
+This release of Jvolve is meant for researchers. Jvolve is not yet
+available for users to download, install and update their applications. We
+hope to get there some day.
+</div>
+
+<h2>Downloading source</h2>
+
+<p>Source code is maintained using Mercurial, a distributed version control
+system. Before you get started, ensure that you have mercurial installed.</p>
+
+<p>This page contains information on how to download and use Jvolve. There are
+three components (and their corresponding repositories) that you need to
+download. They are</p>
+
+<ol>
+<li><a href="http://bitbucket.org/suriya/jvolve">Jvolve</a>, the VM. Jvolve is built on top of Jikes RVM, a very popular
+research JVM.</li>
+<li><a href="http://bitbucket.org/suriya/upt">UPT</a>, for Update Preparation Tool. This is our offline analysis software
+that compares bytecodes of two versions and provides a specification of the
+update to the VM.</li>
+<li><a href="http://bitbucket.org/suriya/jastaddj">JastAddJ</a>. We have made some minor modifications to JastAddJ to compile
+our object and class transformer functions.</li>
+</ol>
+
+<p>Download the above repositories using Mercurial.</p>
+
+<pre><code>hg clone -r f8fcedddb95e http://bitbucket.org/suriya/jvolve
+hg clone                 http://bitbucket.org/suriya/upt
+hg clone                 http://bitbucket.org/suriya/jastaddj JastAddJ
+</code></pre>
+
+<h2>Building Jvolve</h2>
+
+<p>Jvolve has been tested to work on ia32-osx and ia32-linux platforms.
+Before we build Jvolve, let us build UPT and JastAddJ, both of which are
+straightforward to build. They require nothing more than JDK and Apache
+ant.</p>
+
+<pre><code># Build UPT
+cd upt
+ant
+cd ..
+
+# Build JastAddJ
+cd JastAddJ/Java1.5Backend
+ANT_OPTS="-Xmx256M" ant jar
+cd ..
+</code></pre>
+
+<p>Now, let us get to building and testing Jvolve. Jvolve's requirements are
+the same as those of JikesRVM. If every thing in your system is right, you
+should be able to build Jvolve and run about 25 DSU-specific regression
+tests with a single command. The entire command should take about 5 minutes
+to run.</p>
+
+<pre><code>cd jvolve
+# Command for building and testing
+./bin/buildit    localhost --test-run jvolve
+# Command for building alone (for use later)
+./bin/buildit localhost 
+# Command for running DSU-specific regression tests
+./bin/buildit localhost BaseAdaptiveSemiSpaceDSU
+</code></pre>
+
+<p>Now is a good time to explain what BaseAdaptiveSemiSpaceDSU means. JikesRVM
+comes with various build flavors that represent different choices of JIT
+compilers and Garbage collectors. Jvolve requires JikesRVM's adaptive
+compilation system and is built on top of a semi-space copying collector.
+For more information look in <tt>jvolve/build/configs/</tt>.</p>
+
+<p>If you have trouble building Jvolve, check if you are able to build a stock
+version of Jikes RVM.</p>
+
+<pre><code>cd jvolve
+# Switch the JikesRVM trunk
+hg up -r trunk
+./bin/buildit    localhost BaseAdaptiveSemiSpace
+# Switch back to Jvolve
+hg up -r suriya-dsu
+</code></pre>
+
+<h2>Dynamically updating an application</h2>
+
+<p>Before we update an actual
+application, let us get to know how to trigger the VM to perform a dynamic
+update. There are a few command line options when invoking the VM that
+control DSU behavior. They are</p>
+
+<ul>
+<li><tt>-X:vm:dsuSpecificationFile=filename</tt> to specify the specification file
+obtained from UPT</li>
+<li><tt>-X:vm:enableDsuOsr=true|false</tt> to control whether or not we want
+to utilize On-stack replacement for DSU</li>
+<li><tt>-X:vm:enableDsuReturnBarriers=true|false</tt> to control whether or
+not we want to allow the use of return barriers for DSU</li>
+<li><tt>-X:vm:enableDsuDeveloperInterface=true|false</tt> Jvolve provides an
+API to invoke DSU from within a Java program. This flag controls whether
+or not we allow this API.</li>
+</ul>
+
+<p>The source code contains the most precise information about these flags.
+You can look up options introduced in Jvolve by comparing it to existing
+options in JikesRVM by</p>
+
+<pre><code>hg diff -r trunk rvm/src-generated/options
+</code></pre>
+
+<p>There are two ways to trigger DSU:</p>
+
+<ul>
+<li>Using Jvolve's Java API  applications can invoke the method
+<tt>org.jikesrvm.dsu.DeveloperInterface.invokeDSU()</tt> from within the
+program. Jvolve's regression tests use this feature. Take a look at
+code in <tt>testing/tests/jvolve/src</tt>. These regression tests have
+two directories <tt>r0/</tt> and <tt>r1/</tt> corresponding to two
+versions of the application. The VM starts running version <tt>r0</tt>
+and updates to <tt>r1</tt> when the programmer calls
+<tt>invokeDSU()</tt>. The specification file (whose format is not
+documented anywhere yet) is available in these directories as
+<tt>dsu-specification.txt</tt>. Class and object transformers for the
+update reside in the <tt>transformers/</tt> directory of each test.</li>
+<li>By signalling the VM. Jvolve uses <tt>SIGUSR1</tt> for this purpose.
+Either <tt>killall -USR1 JikesRVM</tt> or <tt>kill -USR1 PID</tt> will
+trigger a dynamic update.</li>
+</ul>
+
+<h2>Preparing the update specification</h2>
+
+<p>As mentioned above, Jvolve provides a command line option to specify an
+update specification file. UPT creates a specification file and code for
+class and object transformers from the jar files for the old and new
+versions. UPT can be invoked as follows.</p>
+
+<pre><code>upt/bin/upt.sh -a old-jar-file -b new-jar-file \
+    -c path-where-new-jar-file-will-be-placed-for-the-vm \
+    -p a-prefix-to-generate-old-version-stubs
+</code></pre>
+
+<p>For example,</p>
+
+<pre><code>upt/bin/upt.sh -a r0/application.jar -b r1/application.jar \
+    -c /complete/path/to/r1/application.jar \
+    -p r0_
+</code></pre>
+
+<h2>Questions?</h2>
+
+<p>If you have any issues with getting Jvolve to work, or any other comments
+or suggestions, please feel free to contact Suriya Subramanian at
+firstname@cs.utexas.edu.</p>
+
+<h2>Translations</h2>
+<a href="http://www.azoft.com/people/seremina/edu/jvovle-rom.html">View
+    this page in Romanian</a> courtesy of <a href="http://www.azoft.com/">azoft</a>
+  </body>
+</html>
