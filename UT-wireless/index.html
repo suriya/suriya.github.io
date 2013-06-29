@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <style type="text/css">
+      body {
+          width: 1000px;
+          font-family: verdana,arial,sans-serif;
+      }
+      img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 1ex;
+      }
+  </style>
+  <title>Connecting to the UT restricted.utexas.edu network in Linux (Ubuntu 7.04)</title>
+</head>
+<body>
+    <h2> Connecting to the UT restricted.utexas.edu wireless network in
+        Linux (Ubuntu 7.04) </h2>
+    <p>
+        This document describes what I did to access the
+        "restricted.utexas.edu" wireless network at UT. Your mileage may
+        vary.  UT ITS provides <a
+        href="https://management.pna.utexas.edu/static/faqs/dot1x/dot1x-linux.html">
+        instructions for connecting to the wireless network using
+        Linux</a>.  This page is applicable to <a
+        href="https://wiki.ubuntu.com/FeistyFawn">Ubuntu Feisty Fawn
+        7.04</a>.
+    </p>
+
+    <p>
+        Ubuntu comes with Gnome's <a
+        href="http://www.gnome.org/projects/NetworkManager/">NetworkManager</a>
+        which makes connecting to wireless networks a lot easier than it
+        was in the past.  NetworkManager (present as a small icon on the
+        top right corner of the screen) shows a list of wireless networks.
+        Choose "restricted.utexas.edu".
+        <img src="choose.png" alt="Choose restricted.utexas.edu as your
+        wireless network" />
+    </p>
+
+    <p>
+        Choosing this network pops up a window asking for some login
+        information. Enter details as shown in the figure below. The only
+        field that deserves mention is "CA Certificate File". This file is
+        the text file obtained by following steps 1-5 of the <a
+        href="https://management.pna.utexas.edu/static/faqs/dot1x/dot1x-linux.html">instructions
+        provided by UT ITS</a>. You can also download it <a
+        href="ThawtePremiumServerCA_b64.txt">here</a>. I am not a lawyer,
+        but to the best of my knowledge and understanding, the <a
+        href="http://www.thawte.com/roots/">Thawte Root Certificate License
+        Agreement</a> does not prevent me from making this certificate file
+        available here. You should follow the instructions provided by ITS
+        to make sure you got the right certificate file.
+        <img src="configure.png" alt="Enter details" />
+    </p>
+
+    <p>
+        At this point, you should be able to connect to the
+        restricted.utexas.edu wireless network. I hope these instructions
+        were useful.
+    </p>
+    <p>
+    Last modified: Tue Apr 24 19:00:54 CDT 2007
+    </p>
+</body>
+</html>
