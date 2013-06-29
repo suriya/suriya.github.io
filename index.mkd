@@ -5,13 +5,11 @@ description: Personal home page
 header: Suriya Subramanian
 ---
 ## Suriya Subramanian (resume: [PDF][PDF]<!-- [TXT][TXT]-->)
-### Doctoral Candidate (Advisor: [Prof. Kathryn S. McKinley][mckinley])<br /> [Department of Computer Science][utcs] <br /> [The University of Texas at Austin][ut]
+### PhD Graduate (Advisor: [Prof. Kathryn S. McKinley][mckinley])<br /> [Department of Computer Science][utcs] <br /> [The University of Texas at Austin][ut]
 
 --------------------------------------------------------------
 
 ## Contact Information
-Office: [ACES][aces] 3SEo5A  
-Phone : (512) 232 7439  
 E-mail: firstname@alumni.cs.utexas.edu ([public key][gpg])  
 
 --------------------------------------------------------------
