@@ -19,19 +19,23 @@ Suriya Subramanian: "Dynamic Software Updates: A VM-Centric Approach," The
 University of Texas at Austin, May 2010. [[PDF]][thesis-pdf]
 
 ## Conference Publications
-1. Stephen Magill, Michael Hicks, Suriya Subramanian, Kathryn S. McKinley:
+1. Animesh Nandi, Suriya Subramanian, Sriram Lakshminarasimhan, Prasad Deshpande, Sriram
+Raghavan: "Lifespan-Based Partitioning of Index Structures for Time-Travel
+Text Search," In 24th ACM International Conference on Information and
+Knowledge Management (CIKM), 2015.
+2. Stephen Magill, Michael Hicks, Suriya Subramanian, Kathryn S. McKinley:
 "Automating Object Transformations for Dynamic Software Updating," In
 Object-oriented Programming, Systems, Languages, and Applications (OOPSLA),
 2012 (25% acceptance rate). [[PDF]][restore-oopsla]
-2. Suriya Subramanian, Michael Hicks, Kathryn S. McKinley: "Dynamic
+3. Suriya Subramanian, Michael Hicks, Kathryn S. McKinley: "Dynamic
 Software Updates in Java: A VM-centric approach," In Programming Language
 Design and Implementation (PLDI), June 2009 (20% acceptance rate).
 [[PDF]][jvolve-pldi] [[slides]][jvolve-pldi-slides]
 [[Jvolve source code]][jvolve]
-3. Suriya Subramanian, Kathryn S. McKinley: "HeDGE: Hybrid Dataflow Graph
+4. Suriya Subramanian, Kathryn S. McKinley: "HeDGE: Hybrid Dataflow Graph
 Execution in the Issue logic," The 4th International Conference on High
 Performance and Embedded Architectures and Compilers (HiPEAC), 2009. [[PDF]][hedge]
-4. Mohan G Kabadi, Natarajan Kannan, Palanidaran Chidambaram, Suriya
+5. Mohan G Kabadi, Natarajan Kannan, Palanidaran Chidambaram, Suriya
 Subramanian, and Ranjani Parthasarathi: "Dead-Block Elimination in Cache:
 A Mechanism to Reduce I-Cache Power Consumption in High Performance
 Microprocessors," 9th International Conference on High Performance
